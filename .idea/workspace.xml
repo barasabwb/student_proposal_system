@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/PageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/UploadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/students/File.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_14_090614_create_files_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/upload.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProposalSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProposalSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Student Module File upload and Viewing">
+      <change afterPath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/PageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/student.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/student.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +199,8 @@
       <workItem from="1618213658989" duration="12626000" />
       <workItem from="1618296061013" duration="19210000" />
       <workItem from="1618388566537" duration="7129000" />
-      <workItem from="1618466850376" duration="6732000" />
+      <workItem from="1618466850376" duration="10273000" />
+      <workItem from="1618485899440" duration="7706000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -219,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618310108956</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Student Module File upload and Viewing">
+      <created>1618474580286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618474580286</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +237,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Student Module File upload and Viewing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student Module File upload and Viewing" />
   </component>
 </project>

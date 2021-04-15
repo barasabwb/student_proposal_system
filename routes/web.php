@@ -24,6 +24,10 @@ Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->mid
 Route::get('/students', 'HomeController@handleStudent')->name('student.route')->middleware('admin');
 Route::get('/supervisors', 'HomeController@handleSupervisor')->name('supervisor.route')->middleware('admin');
 Route::get('/students/upload',[\App\Http\Controllers\Students\PagesController::class, 'openUploadForm'])->name('studentUpload');
-Route::post('/students/upload', [\App\Http\Controllers\students\UploadController::class, 'fileUpload'])->name('fileUpload');
-Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
+Route::post('/students/upload', [\App\Http\Controllers\students\FileController::class, 'fileUpload'])->name('fileUpload');
+//Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
+Route::resource('students/myproposals','students\FileController');
+
+
+
 
