@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin');
-Route::get('student/home', 'HomeController@handleStudent')->name('student.route')->middleware('admin');
-Route::get('supervisor/home', 'HomeController@handleSupervisor')->name('supervisor.route')->middleware('admin');
+Route::get('/students', 'HomeController@handleStudent')->name('student.route')->middleware('admin');
+Route::get('/supervisors', 'HomeController@handleSupervisor')->name('supervisor.route')->middleware('admin');
+Route::get('/students/upload',[\App\Http\Controllers\Students\PagesController::class, 'openUploadForm'])->name('studentUpload');
+Route::post('/students/upload', [\App\Http\Controllers\students\UploadController::class, 'fileUpload'])->name('fileUpload');
+Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
 

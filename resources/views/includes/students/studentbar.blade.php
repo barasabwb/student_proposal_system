@@ -5,8 +5,8 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">{{auth()->user()->username}}</div>
         <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action bg-light">My Proposals</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Upload New Proposal</a>
+            <a href="{{route('myProposals')}}" class="list-group-item list-group-item-action bg-light">My Proposals</a>
+            <a href="{{route('studentUpload')}}" class="list-group-item list-group-item-action bg-light">Upload New Proposal</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Proposal Progress</a>
 
         </div>

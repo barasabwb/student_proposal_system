@@ -3,7 +3,7 @@
 @section('content')
     @if (Auth::check())
 
-        You are already logged in (or perform a redirect somewhere)
+
     @else
         <?php
 
