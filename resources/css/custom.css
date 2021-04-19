@@ -8,6 +8,11 @@
 /* #Primary
 ================================================== */
 
+#form1 {
+
+    display:none;
+
+}
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -22,6 +27,7 @@ body{
     overflow-x: hidden;
     transition: all 200ms linear;
 }
+
 ::selection {
     color: #fff;
     background-color: #8167a9;

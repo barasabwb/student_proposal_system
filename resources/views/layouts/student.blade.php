@@ -48,6 +48,9 @@
         $("#wrapper").toggleClass("toggled");
 
     });
+    $("#formButton").click(function(){
+        $("#form1").toggle();
+    });
 </script>
 
 

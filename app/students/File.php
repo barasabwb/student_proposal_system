@@ -2,6 +2,8 @@
 
 namespace App\students;
 
+use App\SupervisorComments;
+use App\students\Revision;
 use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
@@ -10,8 +12,24 @@ class File extends Model
         'file_name',
         'file_path',
         'username',
-        'revision'
+        'revisions',
+        'thesis'
 
 
     ];
+
+    public function revisions(){
+        return $this->hasMany(Revision::class);
+
+}
+     public function comments(){
+         return $this->hasMany(SupervisorComments::class);
+
+    }
+public function addRevision(){
+
+}
+public function addComment(){
+
+}
 }

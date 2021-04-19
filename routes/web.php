@@ -25,6 +25,7 @@ Route::get('/students', 'HomeController@handleStudent')->name('student.route')->
 Route::get('/supervisors', 'HomeController@handleSupervisor')->name('supervisor.route')->middleware('admin');
 Route::get('/students/upload',[\App\Http\Controllers\Students\PagesController::class, 'openUploadForm'])->name('studentUpload');
 Route::post('/students/upload', [\App\Http\Controllers\students\FileController::class, 'fileUpload'])->name('fileUpload');
+Route::post('/students/makerevision', [\App\Http\Controllers\students\FileController::class, 'addRevision'])->name('uploadRevision');
 //Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
 Route::resource('students/myproposals','students\FileController');
 

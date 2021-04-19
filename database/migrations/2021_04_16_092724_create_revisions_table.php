@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFilesTable extends Migration
+class CreateRevisionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('files', function (Blueprint $table) {
+        Schema::create('revisions', function (Blueprint $table) {
             $table->id();
-            $table->string('file_name');
-            $table->string('file_path');
-            $table->string('username');
-            $table->string('original_file_name');
-            $table->string('thesis');
-            $table->string('revisions')->default('0');
-
+            $table->integer('original_file_id');
+            $table->string('revision_file');
+            $table->string('revision_name');
+            $table->string('revision_comment');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('revisions');
     }
 }
