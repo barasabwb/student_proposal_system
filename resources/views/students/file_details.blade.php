@@ -60,7 +60,7 @@
 
             <div class="form-group">
                 <label for="comment">Revision Comment</label>
-                <input type="text" class="form-control" height="100px" name="revision_comment" id="revision_comment" ">
+                <input type="text" class="form-control" height="100px" name="revision_comment" id="revision_comment" >
 
             </div>
 

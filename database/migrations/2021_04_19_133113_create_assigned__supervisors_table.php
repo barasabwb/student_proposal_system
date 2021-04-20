@@ -15,10 +15,22 @@ class CreateAssignedSupervisorsTable extends Migration
     {
         Schema::create('assigned_supervisors', function (Blueprint $table) {
             $table->id();
-            $table->integer('file_id');
+            $table->unsignedBigInteger('file_id');
+
+            $table->foreign('file_id')
+                ->references('id')
+                ->on('files');
             $table->string('thesis');
-            $table->integer('student_id');
-            $table->integer('supervisor_id');
+            $table->unsignedBigInteger('student_id');
+
+            $table->foreign('student_id')
+                ->references('id')
+                ->on('users');
+            $table->unsignedBigInteger('supervisor_id');
+
+            $table->foreign('supervisor_id')
+                ->references('id')
+                ->on('users');
             $table->timestamps();
 
         });

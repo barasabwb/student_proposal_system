@@ -22,11 +22,18 @@
                 </div>
             @endif
             <div class="form-group">
-                <label for="file">Example file input</label>
+                <label for="file">Please upload your document</label>
                 <input type="file" class="form-control-file" name="file" id="chooseFile">
-            </div> <div class="form-group">
+            </div>
+            <div class="form-group">
+                <label for="thesis">Type your Thesis here(Proposal topic) - Preferred Documents:pdfs and word documents</label>
+                <input type="text" class="form-control" height="100px" name="thesis" id="thesis" >
+
+            </div>
+
+            <div class="form-group">
                 <button type="submit" name="submit" class="btn btn-primary">
-                    Upload Files
+                    Upload Proposal
                 </button>
             </div>
 

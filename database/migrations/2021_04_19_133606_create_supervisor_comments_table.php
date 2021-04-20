@@ -17,7 +17,11 @@ class CreateSupervisorCommentsTable extends Migration
             $table->id();
             $table->integer('file_id');
             $table->string('comment');
-            $table->string('supervisor_id');
+            $table->unsignedBigInteger('supervisor_id');
+
+            $table->foreign('supervisor_id')
+                ->references('id')
+                ->on('users');
             $table->timestamps();
         });
     }

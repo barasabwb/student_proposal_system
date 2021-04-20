@@ -17,6 +17,7 @@ class CreateFilesTable extends Migration
             $table->id();
             $table->string('file_name');
             $table->string('file_path');
+
             $table->string('username');
             $table->string('original_file_name');
             $table->string('thesis');
