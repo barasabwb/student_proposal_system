@@ -15,11 +15,12 @@ class CreateProposalProgressTable extends Migration
     {
         Schema::create('proposal_progress', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('file_id');
             $table->foreign('file_id')
                 ->references('id')
                 ->on('files');
             $table->string('thesis');
-            $table->bigInteger('student_id');
+            $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')
                 ->references('id')
                 ->on('users');
