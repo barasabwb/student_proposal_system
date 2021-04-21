@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Console\Input\Input;
@@ -69,6 +70,25 @@ class FileController extends Controller
 
         $to_delete->delete();
         return redirect('students/myproposals')->with('success', 'document deleted!');
+
+
+    }
+    public function approveFile(Request $req,$id){
+        $file = File::find($id);
+        $supervisor_id = ($req->input('supervisor'));
+        $file->approval = 'approved';
+        $file->save();
+        $progress= new ProposalProgress();
+        $progress->file_id= $id;
+        $progress->thesis= $file->thesis;
+        $student = User::where('username', $file->username)->firstOrFail();
+        $progress->student_id = $student->id;
+        $progress->supervisor_id = $supervisor_id;
+        $progress->save();
+        return redirect('admin/files')
+            ->with('success','File has been approved');
+
+
 
 
     }

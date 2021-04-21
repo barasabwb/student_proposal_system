@@ -30,9 +30,9 @@ class CreateProposalProgressTable extends Migration
                 ->references('id')
                 ->on('users');
             $table->string('supervisor_status')->default('pending');
-            $table->string('supervisor_final_comment');
+            $table->string('supervisor_final_comment')->default('No comment');
             $table->string('chairman_status')->default('pending');
-            $table->string('chairman_final_comment');
+            $table->string('chairman_final_comment')->default('No comment');
             $table->timestamps();
         });
     }

@@ -11,7 +11,8 @@
                 <thead>
                 <tr><th scope="col">Thesis</th>
                     <th scope="col">File Name</th>
-                    <th scope="col">Revisions</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Approval Status</th>
 
                 </tr>
                 </thead>
@@ -20,7 +21,9 @@
                     <tr>
                         <th scope="row">  {{$file->thesis}}</th>
                         <td>{{$file->original_file_name}}</td>
-                        <td>{{$file->revisions}}</td>
+                        <td>{{$file->username}}</td>
+                        <td>{{$file->approval}}</td>
+
                         <td>
                             <a href="/admin/files/{{$file->id}}" class="btn btn-outline-info">
                                 View
