@@ -1,7 +1,14 @@
-@extends('layouts.default')
+@extends('layouts.supervisors')
 
 @section('content')
 
-    i am the supervisor home page
+    <div class="container-fluid">
+        <h1 class="mt-4">Supervisor Module</h1>
+
+    </div>
+    </div>
+
+    </div>
+
 
 @stop

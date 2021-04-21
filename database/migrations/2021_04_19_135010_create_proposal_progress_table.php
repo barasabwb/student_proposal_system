@@ -29,9 +29,9 @@ class CreateProposalProgressTable extends Migration
             $table->foreign('supervisor_id')
                 ->references('id')
                 ->on('users');
-            $table->string('supervisor_status');
+            $table->string('supervisor_status')->default('pending');
             $table->string('supervisor_final_comment');
-            $table->string('chairman_status');
+            $table->string('chairman_status')->default('pending');
             $table->string('chairman_final_comment');
             $table->timestamps();
         });

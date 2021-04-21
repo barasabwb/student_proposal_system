@@ -1,4 +1,4 @@
-@extends('layouts.student')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container-fluid">
@@ -8,7 +8,7 @@
 {{--            @csrf--}}
 {{--            <button>Delete User</button>--}}
 {{--        </form>--}}
-        <form action="{{route('myproposals.destroy', $file->id)}}" method="post">
+        <form action="{{route('files.destroy', $file->id)}}" method="post">
             @method('DELETE')
             @csrf
             <button class="btn btn-danger">Delete</button>

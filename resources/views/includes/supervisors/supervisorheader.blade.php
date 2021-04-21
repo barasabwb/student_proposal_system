@@ -1,2 +1,2 @@
 
-@include('includes.students.studentbar')
+@include('includes.supervisors.supervisorbar')

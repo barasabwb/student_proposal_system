@@ -1,9 +1,9 @@
-@extends('layouts.student')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container-fluid">
-        <h1 class="mt-4">MY PROPOSALS</h1>
-        @if ($my_files==null)
+        <h1 class="mt-4">Submitted Documents</h1>
+        @if ($files==null)
             NOFILES
 
         @else
@@ -16,21 +16,21 @@
                 </tr>
                 </thead>
                 <tbody>
-        @foreach($my_files as $file)
-            <tr>
-                <th scope="row">  {{$file->thesis}}</th>
-                <td>{{$file->original_file_name}}</td>
-                <td>{{$file->revisions}}</td>
-                <td>
-                    <a href="/students/myproposals/{{$file->id}}" class="btn btn-outline-info">
-                        View
-                    </a>
-                </td>
+                @foreach($files as $file)
+                    <tr>
+                        <th scope="row">  {{$file->thesis}}</th>
+                        <td>{{$file->original_file_name}}</td>
+                        <td>{{$file->revisions}}</td>
+                        <td>
+                            <a href="/admin/files/{{$file->id}}" class="btn btn-outline-info">
+                                View
+                            </a>
+                        </td>
 
-            </tr>
+                    </tr>
 
 
-        @endforeach
+                @endforeach
                 </tbody>
             </table>
         @endif

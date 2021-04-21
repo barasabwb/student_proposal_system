@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\students;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\ProposalProgress;
@@ -15,9 +15,9 @@ class FileController extends Controller
 {
 
     public function index(){
-        $my_files= File::all()->where('username', auth()->user()->username)->sortByDesc('created_at');
+        $files= File::all()->where('approval', 'pending')->sortByDesc('created_at');
 
-        return view('students.my_proposals', compact('my_files'));
+        return view('admin.files', compact('files'));
     }
     public function fileUpload(Request $req){
         $req->validate([
@@ -50,7 +50,7 @@ class FileController extends Controller
     public function show($id){
         $file = File::find($id);
         $file_revisions = Revision::all()->where('file_id',$id)->sortByDesc('created_at');
-        return view('students.file_details', compact('file','file_revisions'));
+        return view('admin.file_details',compact('file','file_revisions'));
     }
     public function destroy($id){
         $to_delete = File::find($id);
@@ -72,36 +72,5 @@ class FileController extends Controller
 
 
     }
-    public function addRevision(Request $req){
-        $req->validate([
-            'file' => 'required|mimes:csv,txt,xlx,xls,pdf,docx,zip|max:80000',
-            'revision_comment' => ['required', 'string', 'max:255']
-        ]);
 
-        $revisionModel = new Revision();
-        $id = $req->input('file_id');
-        $filemodel = File::find($id);
-
-        if($req->file()) {
-            $fileName = time().'_'.$req->file->getClientOriginalName();
-            $filePath = $req->file('file')->storeAs('uploads/'.auth()->user()->username, $fileName, 'public');
-
-//            $revisionModel->file_name = time().'_'.$req->file->getClientOriginalName();
-            $withExt = $req->file->getClientOriginalName();
-            $revisionModel->file_id = $id;
-            $revisionModel->revision_name = pathinfo($withExt, PATHINFO_FILENAME);;
-            $revisionModel->revision_file = '/storage/' . $filePath;
-            $revisionModel->revision_comment = $req->input('revision_comment');
-            $filemodel->revisions=$filemodel->revisions+1;
-            $revisionModel->save();
-            $filemodel->save();
-
-            return back()
-                ->with('success','Revision has been uploaded.')
-                ->with('file', $fileName);
-        }
-
-
-
-    }
 }

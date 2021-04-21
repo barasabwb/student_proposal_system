@@ -30,6 +30,11 @@
                 <input type="text" class="form-control" height="100px" name="thesis" id="thesis" >
 
             </div>
+            <div class="form-group">
+                <label for="description">Write a brief description about your Proposal</label>
+                <input type="text" class="form-control" height="100px" name="description" id="description" >
+
+            </div>
 
             <div class="form-group">
                 <button type="submit" name="submit" class="btn btn-primary">

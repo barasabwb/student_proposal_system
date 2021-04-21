@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Student Module - Revisions&#10;Modification to DB, Models and migrations creation">
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Added foreign keys">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/files.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/progress.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/supervisors_assignment.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ProposalProgress.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ProposalProgress.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/students/File.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/students/File.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_14_090614_create_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_14_090614_create_files_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_16_092724_create_revisions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_16_092724_create_revisions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_19_133113_create_assigned__supervisors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_19_133113_create_assigned__supervisors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_19_133606_create_supervisor_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_19_133606_create_supervisor_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_19_135010_create_proposal_progress_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_19_135010_create_proposal_progress_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorheader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorheader.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/supervisors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/supervisors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/supervisors/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/supervisors/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +169,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -166,10 +183,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ProposalSystem\app\Http\Controllers\Admin" />
+      <recent name="C:\laragon\www\ProposalSystem\resources\views\admin" />
       <recent name="C:\laragon\www\ProposalSystem\resources\views\includes\supervisors" />
       <recent name="C:\laragon\www\ProposalSystem\resources\views\includes\students" />
       <recent name="C:\laragon\www\ProposalSystem\resources\views\supervisors" />
-      <recent name="C:\laragon\www\ProposalSystem\resources\views\students" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\ProposalSystem\app\students" />
@@ -205,7 +223,8 @@
       <workItem from="1618485899440" duration="16481000" />
       <workItem from="1618815871848" duration="6280000" />
       <workItem from="1618829297709" duration="10310000" />
-      <workItem from="1618904850699" duration="1141000" />
+      <workItem from="1618904850699" duration="13165000" />
+      <workItem from="1618989074585" duration="6216000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -235,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618843676806</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added foreign keys">
+      <created>1618906990903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618906990903</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added foreign keys">
+      <created>1618907329902</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618907329902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +292,7 @@
     <MESSAGE value="Student Module File upload and Viewing" />
     <MESSAGE value="Student Module - deleting docs, viewing details - unfin*" />
     <MESSAGE value="Student Module - Revisions&#10;Modification to DB, Models and migrations creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student Module - Revisions&#10;Modification to DB, Models and migrations creation" />
+    <MESSAGE value="Added foreign keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added foreign keys" />
   </component>
 </project>

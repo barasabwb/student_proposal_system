@@ -11,19 +11,9 @@
 <body>
 @include('includes.adminheader')
 
-<div class="container">
-
-    <header class="row">
-
-
-
-    </header>
-
-    <div id="main" class="row">
 
         @yield('content')
 
-    </div>
 
     <footer class="row">
 
@@ -32,6 +22,18 @@
     </footer>
 
 </div>
+<script>
+    $("#menu-toggle").click(function(e) {
+
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+
+    });
+    $("#formButton").click(function(){
+        $("#form1").toggle();
+    });
+</script>
+
 
 </body>
 

@@ -7,11 +7,10 @@
         <div class="list-group list-group-flush">
             <a href="#" class="list-group-item list-group-item-action bg-light">Users</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Add Users</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Uploaded Files</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Supervisors</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Students</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">File Progress</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Assign Supervisors</a>
+{{--            <a href="#" class="list-group-item list-group-item-action bg-light">Supervisors</a>--}}
+{{--            <a href="#" class="list-group-item list-group-item-action bg-light">Students</a>--}}
+            <a href="{{route('files.index')}}" class="list-group-item list-group-item-action bg-light">Submitted Files</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Approved Files Progress</a>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -63,28 +62,3 @@
                 </form>
             </div>
         </nav>
-
-        <div class="container-fluid">
-            <h1 class="mt-4">ADMIN PAGE</h1>
-{{--            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>--}}
-{{--            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>--}}
-        </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-
-</div>
-<!-- /#wrapper -->
-
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Menu Toggle Script -->
-<script>
-    $("#menu-toggle").click(function(e) {
-
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-
-    });
-</script>

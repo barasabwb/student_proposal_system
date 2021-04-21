@@ -15,8 +15,8 @@ class CreateRevisionsTable extends Migration
     {
         Schema::create('revisions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('original_file_id');
-            $table->foreign('original_file_id')
+            $table->unsignedBigInteger('file_id');
+            $table->foreign('file_id')
                 ->references('id')
                 ->on('files');
             $table->string('revision_file');

@@ -19,8 +19,11 @@ class CreateFilesTable extends Migration
             $table->string('file_path');
 
             $table->string('username');
+            $table->foreign('username')->references('username')->on('users');
             $table->string('original_file_name');
             $table->string('thesis');
+            $table->string('description');
+            $table->string('approval')->default('pending');
             $table->string('revisions')->default('0');
 
             $table->timestamps();

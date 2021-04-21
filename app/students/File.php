@@ -13,7 +13,8 @@ class File extends Model
         'file_path',
         'username',
         'revisions',
-        'thesis'
+        'thesis',
+        'approval'
 
 
     ];
@@ -26,10 +27,20 @@ class File extends Model
          return $this->hasMany(SupervisorComments::class);
 
     }
-public function addRevision(){
-
 }
-public function addComment(){
-
-}
-}
+//public function addRevision($revision_comment,$revision_file,$revision_name){
+////    $this->revisions()->create(compact('revision_file','revision_name','revision_comment'));
+//    Revision::create([
+//        'file_id'=>5,
+//        'revision_file' =>$revision_file,
+//        'revision_name'=> $revision_name,
+//        'revision_comment' => $revision_comment,
+//
+//
+//    ]);
+//
+//}
+//public function addComment(){
+//
+//}
+//}
