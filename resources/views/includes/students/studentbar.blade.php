@@ -7,7 +7,7 @@
         <div class="list-group list-group-flush">
             <a href="/students/myproposals" class="list-group-item list-group-item-action bg-light">My Proposals</a>
             <a href="{{route('studentUpload')}}" class="list-group-item list-group-item-action bg-light">Upload New Proposal</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Proposal Progress</a>
+            <a href="{{route('openAccepted')}}" class="list-group-item list-group-item-action bg-light">Accepted Proposals and Documents</a>
 
         </div>
     </div>

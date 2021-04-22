@@ -12,6 +12,12 @@
                 <tr><th scope="col">Thesis</th>
                     <th scope="col">File Name</th>
                     <th scope="col">Revisions</th>
+                    <th scope="col">Approval Status</th>
+                    <th scope="col">Date Uploaded</th>
+
+
+
+
 
                 </tr>
                 </thead>
@@ -21,6 +27,8 @@
                 <th scope="row">  {{$file->thesis}}</th>
                 <td>{{$file->original_file_name}}</td>
                 <td>{{$file->revisions}}</td>
+                <td>{{$file->approval}}</td>
+                <td>{{$file->created_at}}</td>
                 <td>
                     <a href="/students/myproposals/{{$file->id}}" class="btn btn-outline-info">
                         View
