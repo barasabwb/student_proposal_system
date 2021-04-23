@@ -26,6 +26,8 @@ Route::post('admin/approve/{approve}', 'Admin\FileController@approveFile')->name
 Route::get('admin/supervisors', 'Admin\PagesController@showSupervisors')->name('admin.supervisors')->middleware('admin');
 Route::get('admin/students', 'Admin\PagesController@showStudents')->name('admin.students')->middleware('admin');
 Route::get('admin/adduser', 'Admin\PagesController@openUserForm')->name('admin.userForm')->middleware('admin');
+Route::get('admin/accepted_proposals', 'Admin\PagesController@showApprovedFiles')->name('admin.accepted')->middleware('admin');
+Route::get('admin/accepted_proposals/{accepted_proposals}',[\App\Http\Controllers\Admin\PagesController::class, 'openAcceptedDetails'])->middleware('admin');
 Route::post('admin/adduser', 'Admin\AdminController@addUser')->name('admin.addUser')->middleware('admin');
 
 

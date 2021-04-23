@@ -11,7 +11,7 @@
 {{--            <a href="#" class="list-group-item list-group-item-action bg-light">Supervisors</a>--}}
 {{--            <a href="#" class="list-group-item list-group-item-action bg-light">Students</a>--}}
             <a href="{{route('files.index')}}" class="list-group-item list-group-item-action bg-light">Submitted Files</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Approved Files Progress</a>
+            <a href="{{route('admin.accepted')}}" class="list-group-item list-group-item-action bg-light">Approved Files Progress</a>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->

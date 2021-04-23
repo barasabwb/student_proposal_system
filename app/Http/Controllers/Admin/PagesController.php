@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Http\Controllers\Controller;
+use App\ProposalProgress;
+use App\students\Revision;
 use App\User;
 
 class PagesController extends Controller
@@ -27,6 +29,21 @@ class PagesController extends Controller
         return view('admin.user_form');
 
     }
+    public function showApprovedFiles(){
+        $accepted = ProposalProgress::all();
+
+
+        return view('admin.progress')->with(compact('accepted'));
+
+    }
+    public function openAcceptedDetails($id){
+        $details = ProposalProgress::find($id);
+        $file_revisions = Revision::all()->where('file_id',$details->file_id);
+
+
+        return view('admin.progress_details', compact('details','file_revisions'));
+    }
+
 
 
 

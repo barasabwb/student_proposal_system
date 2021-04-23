@@ -1,12 +1,13 @@
-@extends('layouts.student')
+@extends('layouts.admin')
 
 @section('content')
 
     <div class="container-fluid">
-{{--        <h1 class="mt-4">{{$details->thesis}}</h1>--}}
+        {{--        <h1 class="mt-4">{{$details->thesis}}</h1>--}}
         <?php
         $file = \App\students\File::find($details->file_id);
         $supervisor = \App\User::find($details->supervisor_id);
+        $student = \App\User::find($details->student_id);
         ?>
 
         <h3 class="mt-4"><b>File Name:</b>{{$file->original_file_name}}</h3>
@@ -16,6 +17,10 @@
 
 
         <h5><b>Description:</b>{{$file->description}}</h5>
+        <br>
+        <h5><b>Student:</b>{{$student->name}}</h5>
+        <br>
+        <h5><b>Student Email:</b>{{$student->email}}</h5>
         <br>
         <h5><b>Supervisor:</b>{{$supervisor->name}}</h5>
         <br>
@@ -37,11 +42,11 @@
         {{--            @csrf--}}
         {{--            <button>Delete User</button>--}}
         {{--        </form>--}}
-{{--        <form action="{{route('myproposals.destroy', $details->id)}}" method="post">--}}
-{{--            @method('DELETE')--}}
-{{--            @csrf--}}
-{{--            <button class="btn btn-danger">Delete</button>--}}
-{{--        </form>--}}
+        {{--        <form action="{{route('myproposals.destroy', $details->id)}}" method="post">--}}
+        {{--            @method('DELETE')--}}
+        {{--            @csrf--}}
+        {{--            <button class="btn btn-danger">Delete</button>--}}
+        {{--        </form>--}}
         <br>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">

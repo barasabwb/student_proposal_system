@@ -42,13 +42,7 @@ class AdminController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
 
         ]);
-//        $user = new User();
-//        $user->name = $req->input('name');
-//        $user->username = $req->input('username');
-//        $user->role = $req->input('role');
-//        $user->email = $req->input('email');
-//        $user->password = Hash::make($req->input('password'));
-//        $user->save();
+
 
         User::create([
             'name' => $req->input('name'),
