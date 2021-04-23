@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Student Submission Approval">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/students.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/supervisors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/progess.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/students/progress_details.blade.php" afterDir="false" />
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Admin and Student Module development. - progress checks, assigning supervisors">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/students.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/students.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/supervisors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/supervisors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +213,8 @@
       <workItem from="1618829297709" duration="10310000" />
       <workItem from="1618904850699" duration="13165000" />
       <workItem from="1618989074585" duration="15640000" />
-      <workItem from="1619078785350" duration="12912000" />
+      <workItem from="1619078785350" duration="16871000" />
+      <workItem from="1619161866894" duration="6965000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -275,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619006384798</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Admin and Student Module development. - progress checks, assigning supervisors">
+      <created>1619102720150</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1619102720150</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +306,7 @@
     <MESSAGE value="Added foreign keys" />
     <MESSAGE value="Development Branch commit" />
     <MESSAGE value="Student Submission Approval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student Submission Approval" />
+    <MESSAGE value="Admin and Student Module development. - progress checks, assigning supervisors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin and Student Module development. - progress checks, assigning supervisors" />
   </component>
 </project>

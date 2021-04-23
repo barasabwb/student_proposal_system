@@ -12,8 +12,8 @@
                 <thead>
                 <tr><th scope="col">User Id</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Role</th>
 
                 </tr>
                 </thead>

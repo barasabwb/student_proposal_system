@@ -7,7 +7,7 @@
         <div class="list-group list-group-flush">
             <a href="{{route('admin.supervisors')}}" class="list-group-item list-group-item-action bg-light">Supervisors</a>
             <a href="{{route('admin.students')}}" class="list-group-item list-group-item-action bg-light">Students</a>
-{{--            <a href="{{route('admin.adduser')}}" class="list-group-item list-group-item-action bg-light">Add User</a>--}}
+            <a href="{{route('admin.userForm')}}" class="list-group-item list-group-item-action bg-light">Add User</a>
 {{--            <a href="#" class="list-group-item list-group-item-action bg-light">Supervisors</a>--}}
 {{--            <a href="#" class="list-group-item list-group-item-action bg-light">Students</a>--}}
             <a href="{{route('files.index')}}" class="list-group-item list-group-item-action bg-light">Submitted Files</a>

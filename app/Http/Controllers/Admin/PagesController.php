@@ -21,6 +21,12 @@ class PagesController extends Controller
         return view('admin.students', compact('students'));
 
     }
+    public function openUserForm(){
+
+
+        return view('admin.user_form');
+
+    }
 
 
 
