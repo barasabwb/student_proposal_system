@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\PagesController;
+use App\Http\Controllers\students\FileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +34,7 @@ Route::get('admin/supervisors', 'Admin\PagesController@showSupervisors')->name('
 Route::get('admin/students', 'Admin\PagesController@showStudents')->name('admin.students')->middleware('admin');
 Route::get('admin/adduser', 'Admin\PagesController@openUserForm')->name('admin.userForm')->middleware('admin');
 Route::get('admin/accepted_proposals', 'Admin\PagesController@showApprovedFiles')->name('admin.accepted')->middleware('admin');
-Route::get('admin/accepted_proposals/{accepted_proposals}',[\App\Http\Controllers\Admin\PagesController::class, 'openAcceptedDetails'])->middleware('admin');
+Route::get('admin/accepted_proposals/{accepted_proposals}',[PagesController::class, 'openAcceptedDetails'])->middleware('admin');
 Route::post('admin/adduser', 'Admin\AdminController@addUser')->name('admin.addUser')->middleware('admin');
 
 
@@ -43,8 +46,8 @@ Route::get('/students/upload',[\App\Http\Controllers\Students\PagesController::c
 Route::get('/students/accepted_proposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyAcceptedProposals'])->name('openAccepted');
 Route::get('/students/accepted_proposals/{accepted_proposals}',[\App\Http\Controllers\Students\PagesController::class, 'openAcceptedDetails']);
 
-Route::post('/students/upload', [\App\Http\Controllers\students\FileController::class, 'fileUpload'])->name('fileUpload');
-Route::post('/students/makerevision', [\App\Http\Controllers\students\FileController::class, 'addRevision'])->name('uploadRevision');
+Route::post('/students/upload', [FileController::class, 'fileUpload'])->name('fileUpload');
+Route::post('/students/makerevision', [FileController::class, 'addRevision'])->name('uploadRevision');
 
 //Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
 Route::resource('students/myproposals','students\FileController');
