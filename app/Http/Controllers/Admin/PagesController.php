@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\ProposalProgress;
+use App\students\File;
 use App\students\Revision;
 use App\User;
 
@@ -35,6 +36,11 @@ class PagesController extends Controller
 
         return view('admin.progress')->with(compact('accepted'));
 
+    }
+    public function showRejectedFiles(){
+        $files= File::all()->where('approval', 'rejected')->sortByDesc('created_at');
+
+        return view('admin.rejected_files', compact('files'));
     }
     public function openAcceptedDetails($id){
         $details = ProposalProgress::find($id);

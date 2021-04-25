@@ -34,7 +34,8 @@
 
 
         <br>
-        <form action="" method="post">
+        <form action="{{route('admin.reject', $file->id)}}" method="post">
+            @csrf
 
             <button class="btn btn-danger">Reject</button>
         </form>

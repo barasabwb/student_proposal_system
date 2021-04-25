@@ -5,13 +5,25 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">Admin</div>
         <div class="list-group list-group-flush">
-            <a href="{{route('admin.supervisors')}}" class="list-group-item list-group-item-action bg-light">Supervisors</a>
-            <a href="{{route('admin.students')}}" class="list-group-item list-group-item-action bg-light">Students</a>
-            <a href="{{route('admin.userForm')}}" class="list-group-item list-group-item-action bg-light">Add User</a>
-{{--            <a href="#" class="list-group-item list-group-item-action bg-light">Supervisors</a>--}}
-{{--            <a href="#" class="list-group-item list-group-item-action bg-light">Students</a>--}}
-            <a href="{{route('files.index')}}" class="list-group-item list-group-item-action bg-light">Submitted Files</a>
-            <a href="{{route('admin.accepted')}}" class="list-group-item list-group-item-action bg-light">Approved Files Progress</a>
+            <a class="dropdown-btn btn-info">Users
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="{{route('admin.supervisors')}}" class="list-group-item list-group-item-action bg-light">Supervisors</a>
+                <a href="{{route('admin.students')}}" class="list-group-item list-group-item-action bg-light">Students</a>
+                <a href="{{route('admin.userForm')}}" class="list-group-item list-group-item-action bg-light">Add User</a>
+            </div>
+
+            <a class="dropdown-btn btn-info">Documents
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="{{route('files.index')}}" class="list-group-item list-group-item-action bg-light">Submitted Files</a>
+                <a href="{{route('admin.rejected_files')}}" class="list-group-item list-group-item-action bg-light">Rejected Files</a>
+
+                <a href="{{route('admin.accepted')}}" class="list-group-item list-group-item-action bg-light">Approved Files & Progress</a>
+            </div>
+
         </div>
     </div>
     <!-- /#sidebar-wrapper -->

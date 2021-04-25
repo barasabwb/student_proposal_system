@@ -92,5 +92,18 @@ class FileController extends Controller
 
 
     }
+    public function rejectFile(Request $req,$id){
+        $file = File::find($id);
+
+        $file->approval = 'rejected';
+        $file->save();
+
+        return redirect('admin/files')
+            ->with('success','File has been rejected');
+
+
+
+
+    }
 
 }

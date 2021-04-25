@@ -23,6 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin');
 Route::get('admin/approve/{approve}', 'Admin\AdminController@openApproveForm')->name('admin.assign')->middleware('admin');
 Route::post('admin/approve/{approve}', 'Admin\FileController@approveFile')->name('admin.approve')->middleware('admin');
+Route::get('admin/rejected/', 'Admin\PagesController@showRejectedFiles')->name('admin.rejected_files')->middleware('admin');
+
+Route::post('admin/reject/{reject}', 'Admin\FileController@rejectFile')->name('admin.reject')->middleware('admin');
+
 Route::get('admin/supervisors', 'Admin\PagesController@showSupervisors')->name('admin.supervisors')->middleware('admin');
 Route::get('admin/students', 'Admin\PagesController@showStudents')->name('admin.students')->middleware('admin');
 Route::get('admin/adduser', 'Admin\PagesController@openUserForm')->name('admin.userForm')->middleware('admin');
