@@ -33,6 +33,8 @@ Route::post('admin/reject/{reject}', 'Admin\FileController@rejectFile')->name('a
 Route::get('admin/supervisors', 'Admin\PagesController@showSupervisors')->name('admin.supervisors')->middleware('admin');
 Route::get('admin/students', 'Admin\PagesController@showStudents')->name('admin.students')->middleware('admin');
 Route::get('admin/adduser', 'Admin\PagesController@openUserForm')->name('admin.userForm')->middleware('admin');
+Route::post('download/{download}', 'Admin\FileController@downloadFile')->name('admin.download')->middleware('admin');
+
 Route::get('admin/accepted_proposals', 'Admin\PagesController@showApprovedFiles')->name('admin.accepted')->middleware('admin');
 Route::get('admin/accepted_proposals/{accepted_proposals}',[PagesController::class, 'openAcceptedDetails'])->middleware('admin');
 Route::post('admin/adduser', 'Admin\AdminController@addUser')->name('admin.addUser')->middleware('admin');
@@ -46,8 +48,17 @@ Route::get('/students/upload',[\App\Http\Controllers\Students\PagesController::c
 Route::get('/students/accepted_proposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyAcceptedProposals'])->name('openAccepted');
 Route::get('/students/accepted_proposals/{accepted_proposals}',[\App\Http\Controllers\Students\PagesController::class, 'openAcceptedDetails']);
 
+
+
 Route::post('/students/upload', [FileController::class, 'fileUpload'])->name('fileUpload');
 Route::post('/students/makerevision', [FileController::class, 'addRevision'])->name('uploadRevision');
+
+Route::get('supervisors/assigned', 'Supervisors\PagesController@openMyAssignedProposals')->name('supervisors.assigned')->middleware('admin');
+Route::get('supervisors/assigned/{assigned}',[\App\Http\Controllers\Supervisors\PagesController::class, 'openAcceptedDetails']);
+Route::post('supervisors/addComment', [\App\Http\Controllers\Supervisors\SupervisorsController::class, 'addComment'])->name('supervisors.addComment');
+Route::get('supervisors/finalize/{finalize}', 'Supervisors\SupervisorsController@openFinalizeForm')->name('supervisors.finalizeForm')->middleware('admin');
+Route::post('supervisors/finalize/{finalize}', 'Supervisors\SupervisorsController@finalizeProposal')->name('supervisors.finalize')->middleware('admin');
+
 
 //Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');
 Route::resource('students/myproposals','students\FileController');

@@ -71,6 +71,13 @@
             </div>
 
         </form>
+        <br>
+        <form action="{{route('admin.download',$file->id)}}" method="post">
+            @csrf
+
+            <button class="btn btn-info">Download<i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+        </form>
 
 
 

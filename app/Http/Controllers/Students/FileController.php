@@ -79,8 +79,8 @@ class FileController extends Controller
         ]);
 
         $revisionModel = new Revision();
-        $id = $req->input('file_id');
-        $filemodel = File::find($id);
+        $file_id = $req->input('file_id');
+        $filemodel = File::find($file_id);
 
         if($req->file()) {
             $fileName = time().'_'.$req->file->getClientOriginalName();
@@ -88,7 +88,7 @@ class FileController extends Controller
 
 //            $revisionModel->file_name = time().'_'.$req->file->getClientOriginalName();
             $withExt = $req->file->getClientOriginalName();
-            $revisionModel->file_id = $id;
+            $revisionModel->file_id = $file_id;
             $revisionModel->revision_name = pathinfo($withExt, PATHINFO_FILENAME);;
             $revisionModel->revision_file = '/storage/' . $filePath;
             $revisionModel->revision_comment = $req->input('revision_comment');

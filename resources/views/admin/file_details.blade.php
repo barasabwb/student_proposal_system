@@ -20,9 +20,12 @@
 {{--            @csrf--}}
 {{--            <button>Delete User</button>--}}
 {{--        </form>--}}
-        <form action="" method="post">
 
-            <button class="btn btn-info">Download</button>
+        <form action="{{route('admin.download',$file->id)}}" method="post">
+            @csrf
+
+            <button class="btn btn-info">Download<i class="fa fa-download" aria-hidden="true"></i>
+            </button>
         </form>
         <br>
         <br>

@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Admin Module - basic page navigation and data">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/rejected_files.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProposalSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProposalSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Made web route imports">
+      <change afterPath="$PROJECT_DIR$/app/FinalDocs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/FileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/PagesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_27_085754_create_final_docs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Chairman/approved_files.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Chairman/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/supervisors/approved_files.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/supervisors/finalize_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/supervisors/progress_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/SupervisorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/SupervisorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/SupervisorComments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/SupervisorComments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/adminbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +167,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/supervisors" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -175,11 +181,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\ProposalSystem\resources\views\supervisors" />
+      <recent name="C:\laragon\www\ProposalSystem\app\Http\Controllers\Supervisors" />
+      <recent name="C:\laragon\www\ProposalSystem\resources\views\Chairman" />
       <recent name="C:\laragon\www\ProposalSystem\app\Http\Controllers\Admin" />
       <recent name="C:\laragon\www\ProposalSystem\resources\views\admin" />
-      <recent name="C:\laragon\www\ProposalSystem\resources\views\includes\supervisors" />
-      <recent name="C:\laragon\www\ProposalSystem\resources\views\includes\students" />
-      <recent name="C:\laragon\www\ProposalSystem\resources\views\supervisors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\ProposalSystem\app\students" />
@@ -219,7 +225,9 @@
       <workItem from="1618989074585" duration="15640000" />
       <workItem from="1619078785350" duration="16871000" />
       <workItem from="1619161866894" duration="14932000" />
-      <workItem from="1619344220389" duration="1015000" />
+      <workItem from="1619344220389" duration="8193000" />
+      <workItem from="1619417638624" duration="9249000" />
+      <workItem from="1619508122824" duration="8530000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -298,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619185300174</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Admin Module dev">
+      <created>1619345535457</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1619345535457</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Made web route imports">
+      <created>1619345608900</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1619345608900</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +350,8 @@
     <MESSAGE value="Admin and Student Module development. - progress checks, assigning supervisors" />
     <MESSAGE value="Admin Module - add users" />
     <MESSAGE value="Admin Module - basic page navigation and data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin Module - basic page navigation and data" />
+    <MESSAGE value="Admin Module dev" />
+    <MESSAGE value="Made web route imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made web route imports" />
   </component>
 </project>
