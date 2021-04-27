@@ -55,6 +55,9 @@ class LoginController extends Controller
             }else if (auth()->user()->role== 'supervisor'){
                 return redirect()->route('supervisor.route');
             }
+            else if (auth()->user()->role== 'chairman'){
+                return redirect()->route('chairman.route');
+            }
         }else{
             return redirect()->route('login')
                 ->with('error','Email & Password are incorrect.');

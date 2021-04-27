@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Admin\PagesController;
-use App\Http\Controllers\students\FileController;
+use App\Http\Controllers\Students\Admin\PagesController;
+use App\Http\Controllers\Students\students\FileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +50,7 @@ Route::get('/students/accepted_proposals/{accepted_proposals}',[\App\Http\Contro
 
 
 
+
 Route::post('/students/upload', [FileController::class, 'fileUpload'])->name('fileUpload');
 Route::post('/students/makerevision', [FileController::class, 'addRevision'])->name('uploadRevision');
 
@@ -58,6 +59,12 @@ Route::get('supervisors/assigned/{assigned}',[\App\Http\Controllers\Supervisors\
 Route::post('supervisors/addComment', [\App\Http\Controllers\Supervisors\SupervisorsController::class, 'addComment'])->name('supervisors.addComment');
 Route::get('supervisors/finalize/{finalize}', 'Supervisors\SupervisorsController@openFinalizeForm')->name('supervisors.finalizeForm')->middleware('admin');
 Route::post('supervisors/finalize/{finalize}', 'Supervisors\SupervisorsController@finalizeProposal')->name('supervisors.finalize')->middleware('admin');
+
+Route::get('/chairman', 'HomeController@handleChairman')->name('chairman.route')->middleware('admin');
+Route::get('chairman/approved', 'chairman\PagesController@openApprovedProposals')->name('chairman.approved')->middleware('admin');
+Route::get('chairman/approved/{approved}', 'chairman\PagesController@openAcceptedDetails')->name('chairman.approvedDetails')->middleware('admin');
+Route::get('chairman/finalize/{finalize}', 'chairman\ChairmanController@openFinalizeForm')->name('chairman.finalizeForm')->middleware('admin');
+Route::post('chairman/finalize/{finalize}', 'chairman\ChairmanController@finalizeProposal')->name('chairman.finalize')->middleware('admin');
 
 
 //Route::get('/students/myproposals',[\App\Http\Controllers\Students\PagesController::class, 'openMyProposals'])->name('myProposals');

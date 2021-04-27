@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Http\Controllers\Students;
+namespace App\Http\Controllers\Students\Students;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;
 
 
-class PagesController extends \App\Http\Controllers\Controller
+class PagesController extends \App\Http\Controllers\Students\Controller
 {
     public function openUploadForm()
     {

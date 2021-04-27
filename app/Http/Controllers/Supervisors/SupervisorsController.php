@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Supervisors;
 
+
 use App\Http\Controllers\Controller;
 use App\ProposalProgress;
 use App\students\File;
@@ -62,7 +63,7 @@ class SupervisorsController extends Controller
 
 
             return redirect(route('supervisors.assigned'))
-                ->with('success','Ready for Chairman Review');
+                ->with('success','Ready for chairman Review');
 
 
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\students;
+namespace App\Http\Controllers\Students\students;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Students\Controller;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;

@@ -37,6 +37,11 @@ class HomeController extends Controller
 
 
         }
+        else if (Auth::user()->role=='chairman') {
+            return view('chairman.home');
+
+
+        }
         return view('home');
     }
     public function handleAdmin()
@@ -50,5 +55,9 @@ class HomeController extends Controller
     public function handleSupervisor()
     {
         return view('supervisors.home');
+    }
+    public function handleChairman()
+    {
+        return view('chairman.home');
     }
 }

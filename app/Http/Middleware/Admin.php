@@ -21,7 +21,11 @@ class Admin
             return $next($request);
         }if(auth()->user()->role== 'supervisor'){
         return $next($request);
-    }
+        }
+        if(auth()->user()->role== 'chairman'){
+            return $next($request);
+        }
+
 
         return redirect('home')->with('error',"Only admin can access!");
     }
