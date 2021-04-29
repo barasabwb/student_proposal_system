@@ -5,9 +5,6 @@
     $student = \App\User::where('username', $file->username)->first();
 
     ?>
-
-
-
     <div class="container-fluid">
         <div class="col-sm-12" style="margin-top: 20px">
             <div class="card">
@@ -83,7 +80,8 @@
                                 </div>
                             </div>
 
-                        </div>     <div class="col-sm-4 col-lg-4">
+                        </div>
+                        <div class="col-sm-4 col-lg-4">
                             <div class="card ">
 
                                 <div class="card-body">
@@ -99,15 +97,10 @@
                     </div>
 
 
-
                 </div>
 
 
             </div>
-
-
-
-
 
 
         </div>
@@ -159,10 +152,6 @@
                     </div>
 
 
-
-
-
-
                 </div>
 
 
@@ -184,10 +173,11 @@
 
                                 <div class="card-body">
                                     <b><p class="text-left">Download</p></b>
-                                    <form  action="{{route('admin.download',$file->id)}}" method="post">
+                                    <form action="{{route('admin.download',$file->id)}}" method="post">
                                         @csrf
 
-                                        <button class="btn btn-info text-white"><i class="fa fa-download" aria-hidden="true"></i>
+                                        <button class="btn btn-info text-white"><i class="fa fa-download"
+                                                                                   aria-hidden="true"></i>
                                         </button>
                                     </form>
 
@@ -202,18 +192,16 @@
                                 <div class="card-body">
                                     <b><p class="text-left">Approve and Assign Supervisor</p></b>
                                     @if ($file->approval=="rejected"||$file->approval=="accepted")
-
-
-                                        Already Approved/Rejected
+                                        Already Rejected/Accepted
 
 
                                     @else
 
-                                        <a class="btn btn-success" href="/admin/approve/{{$file->id}}">Approve and Assign Supervisor</a>
+                                        <a class="btn btn-success" href="/admin/approve/{{$file->id}}">Approve and
+                                            Assign Supervisor</a>
 
 
                                     @endif
-
 
                                 </div>
                             </div>
@@ -223,19 +211,25 @@
                             <div class="card ">
 
                                 <div class="card-body">
-                                    <b><p class="text-left">Progress</p></b>
-                                    @if ($file->approval=='pending'||$file->approval=='rejected')
-                                        Once approved by the administrators, you'll be assigned a supervisor and will be able to check your progress
+                                    <b><p class="text-left">Reject</p></b>
+                                    @if ($file->approval=="rejected"||$file->approval=="accepted")
+                                        Already Accepted/Rejected
+
 
                                     @else
 
+                                        <form action="{{route('admin.reject', $file->id)}}" method="post">
+                                            @csrf
 
-                                        <a class="btn btn-info text-white " href="/students/accepted_proposals/{{$progress->id}}">Check Progress</a>
+                                            <button class="btn btn-danger">Reject</button>
+                                        </form>
 
 
                                     @endif
 
+
                                 </div>
+
                             </div>
 
                         </div>
@@ -244,44 +238,13 @@
                     </div>
 
 
-
-
                 </div>
-
 
             </div>
 
-
-
-
-
-
         </div>
-
-        @if ($file->approval=="rejected"||$file->approval=="accepted")
-
-
-        @else
-            <br>
-            <a class="btn btn-success" href="/admin/approve/{{$file->id}}">Approve and Assign Supervisor</a>
-            <br>
-            <br>
-            <form action="{{route('admin.reject', $file->id)}}" method="post">
-                @csrf
-
-                <button class="btn btn-danger">Reject</button>
-            </form>
-            <br>
-
-        @endif
-
-
-
-
-
     </div>
     </div>
-
     </div>
 
 

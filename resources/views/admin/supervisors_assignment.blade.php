@@ -1,16 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
-    {{$file->id}}
-{{--    @foreach ($student as $item)--}}
 
-
-{{--    @endforeach--}}
     <div class="container-fluid">
-        <h1 class="mt-4">Assign Supervisors</h1>
-        <form action="{{route('admin.approve', $file->id)}}" method="post" class="">
+        <h4 class="mt-4">Assign Supervisor</h4>
+        <form action="{{route('admin.approve', $file->id)}}" method="post" class="form-control">
             @csrf
-            <select name="supervisor" id="supervisor">
+            <label for="supervisor">Choose a supervisor</label>
+            <select  name="supervisor" id="supervisor">
                 @foreach ($supervisors as $item)
                     <option value="{{$item->id}}">{{$item->name}}</option>
 
@@ -18,9 +15,11 @@
                 @endforeach
 
             </select>
+            <br>
+            <br>
 
 
-            <button type="submit" name="submit" class="btn-success">Approve</button>
+            <button type="submit" name="submit" class="btn btn-success">Approve</button>
 
 
 
