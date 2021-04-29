@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;
+use App\SupervisorComments;
 
 
 class PagesController extends Controller
@@ -28,9 +29,10 @@ class PagesController extends Controller
     public function openAcceptedDetails($id){
         $details = ProposalProgress::find($id);
         $file_revisions = Revision::all()->where('file_id',$details->file_id)->sortByDesc('created_at');
+        $comments = SupervisorComments::all()->where('file_id',$details->file_id)->sortByDesc('created_at');
 
 
-        return view('students.progress_details', compact('details','file_revisions'));
+        return view('students.progress_details', compact('details','file_revisions','comments'));
     }
 
 

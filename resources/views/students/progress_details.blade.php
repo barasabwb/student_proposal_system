@@ -462,6 +462,62 @@
 
                             </div>
                         </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="margin-top: 20px">
+                <div class="card">
+                    <div class="card-header">
+                        Supervisor Comments
+
+                    </div>
+                    <div class="card-body">
+                        <div class="row flex">
+                            <div class="col-sm-12 col-lg-12" style="margin-top: 10px">
+
+
+
+                                        @foreach($comments as $comm)
+
+
+
+                                                    <article>
+
+                                                        <li class="list-group-item">
+
+
+                                                            <strong>
+                                                                <i class="fa fa-user bg" aria-hidden="true">  </i> {{$supervisor->name}}: {{$comm->created_at->diffForHumans() }}
+
+                                                            </strong>
+                                                            <br>
+                                                            <p style="margin-left: 20px;font-style: italic;">
+                                                                {{$comm->comment}}
+
+
+
+                                                            </p>
+
+
+                                                        </li>
+
+
+                                                    </article>
+                                    <br>
+
+
+
+
+                                        @endforeach
+
+
+
+
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
