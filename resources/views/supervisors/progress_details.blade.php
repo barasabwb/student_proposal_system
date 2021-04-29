@@ -30,18 +30,16 @@
         <h5><b>Chairman Final Comment:</b>{{$details->chairman_final_comment}}</h5>
         <br>
 
-        <h5></h5>
         <br>
-        {{--        <form action="{{ route('myproposals.destroy', $viewed_file->id }}" method="POST">--}}
-        {{--            @method('DELETE')--}}
-        {{--            @csrf--}}
-        {{--            <button>Delete User</button>--}}
-        {{--        </form>--}}
-{{--        <form action="{{route('myproposals.destroy', $details->id)}}" method="post">--}}
-{{--            @method('DELETE')--}}
-{{--            @csrf--}}
-{{--            <button class="btn btn-danger">Delete</button>--}}
-{{--        </form>--}}
+        <form action="{{route('admin.download',$details->file_id)}}" method="post">
+            @csrf
+
+            <button class="btn btn-info">Download Original<i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+        </form>
+        <br>
+        <br>
+
         <br>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
@@ -64,8 +62,13 @@
 
                 {{$rev->revision_comment}}
 
-                <button>delete</button>
-                <button>download</button>
+                <form action="{{route('admin.downloadRevision',$rev->id)}}" method="post">
+                    @csrf
+
+                    <button class="btn btn-info">Download Revision<i class="fa fa-download" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <br>
 
             @endforeach
 
@@ -76,17 +79,21 @@
 
         <br>
         <br>
+        Comments:
+        <br>
         @if (!$comments->isEmpty())
 
             @foreach($comments as $com)
 
                 {{$com->comment}}
 
-            @if (auth()->user()->id==$com->supervisor_id)
-                    <button>delete</button>
-                    <button><i class="fa fa-pencil-square-o"></i>edit</button>
+            @if (auth()->user()->id==$com->supervisor_id && $details->supervisor_status!='Ready for Chairman Review')
 
-
+                    <form action="{{route('supervisor.destroyComment', $com->id)}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-danger"><i class="fa fa-trash " ></i></button>
+                    </form>
             @endif
 
 
@@ -97,33 +104,41 @@
             <p>No Comments</p>
         @endif
         <br>
+        @if ($details->supervisor_status == 'Ready for Chairman Review')
+            You have already finalized with the document and can no longer add comments/finalize it again.
 
-        <button class="btn btn-info" id="formButton">Add a comment</button>
-        <br>
-        <br>
-        <form id="form1" action="{{route('supervisors.addComment')}}" method="post" enctype="multipart/form-data">
-            @csrf
+        @else
+            <button class="btn btn-info" id="formButton">Add a comment</button>
+            <br>
+            <br>
+            <form id="form1" action="{{route('supervisors.addComment')}}" method="post" enctype="multipart/form-data">
+                @csrf
 
 
-            <input type="text" hidden class="form-control" height="100px" name="file_id" id="file_id" value="{{$details->file_id}}" >
+                <input type="text" hidden class="form-control" height="100px" name="file_id" id="file_id" value="{{$details->file_id}}" >
 
 
-            <div class="form-group">
-                <label for="comment">Comment</label>
-                <input type="text" class="form-control" height="100px" name="comment" id="comment" >
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <input type="text" class="form-control" height="100px" name="comment" id="comment" >
 
-            </div>
+                </div>
 
-            <div class="form-group">
-                <button type="submit" name="submit" class="btn btn-primary">
-                    Post
-                </button>
-            </div>
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-primary">
+                        Post
+                    </button>
+                </div>
 
-        </form>
+            </form>
 
-        <br>
-        <a href="{{route('supervisors.finalizeForm',$details->id)}}" class="btn btn-info">Finalize</a>
+            <br>
+            <a href="{{route('supervisors.finalizeForm',$details->id)}}" class="btn btn-info">Finalize</a>
+
+
+
+        @endif
+
 
 
 

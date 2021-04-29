@@ -69,6 +69,13 @@ class SupervisorsController extends Controller
 
 
         }
+        public function destroyComment($id){
+        $comment_to_delete = SupervisorComments::find($id);
+        $comment_to_delete->delete();
+        return back()->with('success','comment deleted');
+
+
+        }
 
 
 

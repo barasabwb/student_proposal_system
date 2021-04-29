@@ -1,13 +1,14 @@
 <?php
 
 
-namespace App\Http\Controllers\Students\Students;
+namespace App\Http\Controllers\Students;
+use App\Http\Controllers\Controller;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;
 
 
-class PagesController extends \App\Http\Controllers\Students\Controller
+class PagesController extends Controller
 {
     public function openUploadForm()
     {
@@ -26,7 +27,7 @@ class PagesController extends \App\Http\Controllers\Students\Controller
     }
     public function openAcceptedDetails($id){
         $details = ProposalProgress::find($id);
-        $file_revisions = Revision::all()->where('file_id',$details->file_id);
+        $file_revisions = Revision::all()->where('file_id',$details->file_id)->sortByDesc('created_at');
 
 
         return view('students.progress_details', compact('details','file_revisions'));

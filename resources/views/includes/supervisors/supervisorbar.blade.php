@@ -5,7 +5,14 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading">{{auth()->user()->username}}</div>
         <div class="list-group list-group-flush">
-            <a href="{{route('supervisors.assigned')}}" class="list-group-item list-group-item-action bg-light">Assigned Proposals</a>
+            <a class="dropdown-btn btn-info">Assigned Proposals
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-container">
+                <a href="{{route('supervisors.assigned')}}" class="list-group-item list-group-item-action bg-light">Pending Proposals</a>
+                <a href="{{route('supervisors.finalized')}}" class="list-group-item list-group-item-action bg-light">Finalized Proposals</a>
+            </div>
+
 
 
         </div>

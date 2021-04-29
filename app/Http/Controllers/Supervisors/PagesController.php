@@ -12,7 +12,12 @@ class PagesController extends \App\Http\Controllers\Controller
 {
 
     public function openMyAssignedProposals(){
-        $accepted_files= ProposalProgress::all()->where('supervisor_id', auth()->user()->id)->sortByDesc('created_at');
+        $accepted_files= ProposalProgress::all()->where('supervisor_id', auth()->user()->id)->where('supervisor_status','pending')->sortByDesc('created_at');
+
+        return view('supervisors.approved_files', compact('accepted_files'));
+    }
+    public function openFinalizedProposals(){
+        $accepted_files= ProposalProgress::all()->where('supervisor_id', auth()->user()->id)->where('supervisor_status','Ready for Chairman Review')->sortByDesc('created_at');
 
         return view('supervisors.approved_files', compact('accepted_files'));
     }

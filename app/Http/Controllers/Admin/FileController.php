@@ -98,6 +98,12 @@ class FileController extends Controller
         return response()->download($path);
 
 
+}    public function downloadRevision($id){
+    $file=Revision::find($id);
+    $path = public_path($file->revision_file);
+    return response()->download($path);
+
+
 }
 
 

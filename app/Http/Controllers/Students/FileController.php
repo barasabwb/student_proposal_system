@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Students\students;
+namespace App\Http\Controllers\Students;
 
-use App\Http\Controllers\Students\Controller;
+use App\Http\Controllers\Controller;
 use App\ProposalProgress;
 use App\students\File;
 use App\students\Revision;
@@ -69,6 +69,20 @@ class FileController extends Controller
 
         $to_delete->delete();
         return redirect('students/myproposals')->with('success', 'document deleted!');
+
+
+    }
+    public function destroyRevision($id){
+        $to_delete = Revision::find($id);
+
+
+        if(file_exists(public_path($to_delete->revision_file))){
+            unlink(public_path($to_delete->revision_file));
+        }else{
+            dd('File does not exists.');
+        }
+        $to_delete->delete();
+        return back()->with('success', 'Revision deleted!');
 
 
     }

@@ -25,16 +25,16 @@
                         <td>{{$supervisor->email}}</td>
                         <td>{{$supervisor->username}}</td>
 
-                        <td>
-                            <a href="" class="btn btn-outline-info">
-                                Delete
-                            </a>
-                        </td>
-                        <td>
-                            <a href="" class="btn btn-outline-info">
-                                Update
-                            </a>
-                        </td>
+{{--                        <td>--}}
+{{--                            <a href="" class="btn btn-outline-info" disabled>--}}
+{{--                                Delete--}}
+{{--                            </a>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            <a href="" class="btn btn-outline-info" disabled>--}}
+{{--                                Update--}}
+{{--                            </a>--}}
+{{--                        </td>--}}
 
                     </tr>
 

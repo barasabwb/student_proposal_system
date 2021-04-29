@@ -37,16 +37,14 @@
 
         <h5></h5>
         <br>
-        {{--        <form action="{{ route('myproposals.destroy', $viewed_file->id }}" method="POST">--}}
-        {{--            @method('DELETE')--}}
-        {{--            @csrf--}}
-        {{--            <button>Delete User</button>--}}
-        {{--        </form>--}}
-        {{--        <form action="{{route('myproposals.destroy', $details->id)}}" method="post">--}}
-        {{--            @method('DELETE')--}}
-        {{--            @csrf--}}
-        {{--            <button class="btn btn-danger">Delete</button>--}}
-        {{--        </form>--}}
+        <form action="{{route('admin.download',$details->file_id)}}" method="post">
+            @csrf
+
+            <button class="btn btn-info">Download Original<i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+        </form>
+        <br>
+
         <br>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
@@ -69,8 +67,13 @@
 
                 {{$rev->revision_comment}}
 
-                <button>delete</button>
-                <button>download</button>
+
+                <form action="{{route('admin.downloadRevision',$rev->id)}}" method="post">
+                    @csrf
+
+                    <button class="btn btn-info">Download Revision<i class="fa fa-download" aria-hidden="true"></i>
+                    </button>
+                </form>
 
             @endforeach
 
@@ -80,33 +83,6 @@
 
 
         <br>
-
-        <button class="btn btn-info" id="formButton">Make a Revision</button>
-        <br>
-        <br>
-        <form id="form1" action="{{route('uploadRevision')}}" method="post" enctype="multipart/form-data">
-            @csrf
-
-            <div class="form-group">
-                <label for="file">Upload Your Revision</label>
-                <input type="file" class="form-control-file" name="file" id="chooseFile">
-            </div>
-            <input type="text" hidden class="form-control" height="100px" name="file_id" id="file_id" value="{{$details->file_id}}" >
-
-
-            <div class="form-group">
-                <label for="comment">Revision Comment</label>
-                <input type="text" class="form-control" height="100px" name="revision_comment" id="revision_comment" >
-
-            </div>
-
-            <div class="form-group">
-                <button type="submit" name="submit" class="btn btn-primary">
-                    Upload Files
-                </button>
-            </div>
-
-        </form>
 
 
 

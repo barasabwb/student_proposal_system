@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1 class="mt-4">STUDENT MODULE</h1>
+        <h4 class="mt-4" style="text-align: center">STUDENT MODULE</h4>
 
     </div>
     </div>

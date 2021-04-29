@@ -9,6 +9,7 @@
         $supervisor = \App\User::find($details->supervisor_id);
         ?>
 
+
         <h3 class="mt-4"><b>File Name:</b>{{$file->original_file_name}}</h3>
         <br>
         <h5><b>Thesis:</b>{{$details->thesis}}</h5>
@@ -32,16 +33,13 @@
 
         <h5></h5>
         <br>
-        {{--        <form action="{{ route('myproposals.destroy', $viewed_file->id }}" method="POST">--}}
-        {{--            @method('DELETE')--}}
-        {{--            @csrf--}}
-        {{--            <button>Delete User</button>--}}
-        {{--        </form>--}}
-{{--        <form action="{{route('myproposals.destroy', $details->id)}}" method="post">--}}
-{{--            @method('DELETE')--}}
-{{--            @csrf--}}
-{{--            <button class="btn btn-danger">Delete</button>--}}
-{{--        </form>--}}
+        <form action="{{route('admin.download',$details->file_id)}}" method="post">
+            @csrf
+
+            <button class="btn btn-info">Download Original<i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+        </form>
+
         <br>
         @if ($message = Session::get('success'))
             <div class="alert alert-success">
@@ -59,25 +57,64 @@
             </div>
         @endif
         @if (!$file_revisions->isEmpty())
+            @if ($details->supervisor_status=='Ready for Chairman Review')
 
-            @foreach($file_revisions as $rev)
+                <br>
+                @foreach($file_revisions as $rev)
 
-                {{$rev->revision_comment}}
+                    {{$rev->revision_name}} -  {{$rev->revision_comment}}
 
-                <button>delete</button>
-                <button>download</button>
 
-            @endforeach
+                    <form action="{{route('admin.downloadRevision',$rev->id)}}" method="post">
+                        @csrf
+
+                        <button class="btn btn-info">Download Revision<i class="fa fa-download" aria-hidden="true"></i>
+                        </button>
+                    </form>
+
+                @endforeach
+            @else
+                @foreach($file_revisions as $rev)
+
+                    {{$rev->revision_name}} -  {{$rev->revision_comment}}
+
+                    <form action="{{route('student.deleteRevision', $rev->id)}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-danger">Delete Revision</button>
+                    </form>
+                    <br/>
+
+                    <form action="{{route('admin.downloadRevision',$rev->id)}}" method="post">
+                        @csrf
+
+                        <button class="btn btn-info">Download Revision<i class="fa fa-download" aria-hidden="true"></i>
+                        </button>
+                    </form>
+
+                @endforeach
+
+
+            @endif
+
+
 
         @else
             <p>No Revisions</p>
         @endif
-
-
-        <br>
+        @if ($details->supervisor_status=='Ready for Chairman Review')
+            File has already been submitted to the chairman. You can't delete or add new Revisions
+        @else <br>
 
         <button class="btn btn-info" id="formButton">Make a Revision</button>
         <br>
+
+
+        @endif
+
+
+
+
         <br>
         <form id="form1" action="{{route('uploadRevision')}}" method="post" enctype="multipart/form-data">
             @csrf
