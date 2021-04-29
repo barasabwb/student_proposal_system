@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Updated Student UI">
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Finished student UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/progress_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/progress_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +215,7 @@
       <workItem from="1619417638624" duration="9249000" />
       <workItem from="1619508122824" duration="22595000" />
       <workItem from="1619591929702" duration="9426000" />
-      <workItem from="1619682197149" duration="19580000" />
+      <workItem from="1619682197149" duration="20655000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -335,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619705560110</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Finished student UI">
+      <created>1619707584437</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1619707584437</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +379,7 @@
     <MESSAGE value="Chairman Final Approval" />
     <MESSAGE value="Updating views" />
     <MESSAGE value="Updated Student UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Student UI" />
+    <MESSAGE value="Finished student UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished student UI" />
   </component>
 </project>

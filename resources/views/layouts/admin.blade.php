@@ -15,13 +15,8 @@
         @yield('content')
 
 
-    <footer class="row">
 
-        @include('includes.footer')
 
-    </footer>
-
-</div>
 <script>
     $("#menu-toggle").click(function(e) {
 
@@ -47,6 +42,8 @@
         });
     }
 </script>
+
+    @include('includes.footer')
 
 
 </body>
