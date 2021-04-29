@@ -74,13 +74,16 @@ class FileController extends Controller
     }
     public function destroyRevision($id){
         $to_delete = Revision::find($id);
+        $file_update = File::find($to_delete->file_id);
 
 
         if(file_exists(public_path($to_delete->revision_file))){
             unlink(public_path($to_delete->revision_file));
         }else{
-            dd('File does not exists.');
+            dd('File does not exist.');
         }
+        $file_update->revisions= $file_update->revisions-1;
+        $file_update->save();
         $to_delete->delete();
         return back()->with('success', 'Revision deleted!');
 
@@ -95,6 +98,7 @@ class FileController extends Controller
         $revisionModel = new Revision();
         $file_id = $req->input('file_id');
         $filemodel = File::find($file_id);
+
 
         if($req->file()) {
             $fileName = time().'_'.$req->file->getClientOriginalName();

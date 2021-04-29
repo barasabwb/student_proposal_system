@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Chairman Final Approval">
+    <list default="true" id="c556cb58-0d61-410c-a4fa-87232a859d2d" name="Default Changelist" comment="Updating views">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/FileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Students/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Students/StudentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/FileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/SupervisorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Supervisors/SupervisorsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/file_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/progress_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/progress_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/supervisors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/supervisors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/students/studentbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/supervisors/supervisorbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/supervisors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/supervisors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/file_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/my_proposals.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/progress_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/progress_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/upload.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/supervisors/progress_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/supervisors/progress_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +215,7 @@
       <workItem from="1619417638624" duration="9249000" />
       <workItem from="1619508122824" duration="22595000" />
       <workItem from="1619591929702" duration="9426000" />
-      <workItem from="1619682197149" duration="12189000" />
+      <workItem from="1619682197149" duration="17526000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1618310108956</created>
@@ -338,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619529712383</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updating views">
+      <created>1619700203545</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1619700203545</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,6 +363,7 @@
     <MESSAGE value="Made web route imports" />
     <MESSAGE value="Supervisor Final Approval" />
     <MESSAGE value="Chairman Final Approval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chairman Final Approval" />
+    <MESSAGE value="Updating views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating views" />
   </component>
 </project>

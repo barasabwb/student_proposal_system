@@ -14,11 +14,6 @@
                     <th scope="col">Revisions</th>
                     <th scope="col">Approval Status</th>
                     <th scope="col">Date Uploaded</th>
-
-
-
-
-
                 </tr>
                 </thead>
                 <tbody>
